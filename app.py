@@ -475,12 +475,16 @@ HTML_TEMPLATE = '''
 
             <div class="ad-container">
                 <div class="ad-label">Advertisement</div>
-                <p style="color: var(--text-muted); font-size: 0.9rem;">
-                    <!-- Google AdSense Code Here -->
-                    <br/>
-                    &lt;script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-xxxxxxxxxxxxxxxx"<br/>
-                    crossorigin="anonymous"&gt;&lt;/script&gt;
-                </p>
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5573963043624926"
+                     crossorigin="anonymous"></script>
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-5573963043624926"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
             </div>
 
             <div class="posts-grid">
@@ -497,12 +501,16 @@ HTML_TEMPLATE = '''
 
             <div class="ad-container">
                 <div class="ad-label">Advertisement</div>
-                <p style="color: var(--text-muted); font-size: 0.9rem;">
-                    <!-- Google AdSense Code Here -->
-                    <br/>
-                    &lt;script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-xxxxxxxxxxxxxxxx"<br/>
-                    crossorigin="anonymous"&gt;&lt;/script&gt;
-                </p>
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5573963043624926"
+                     crossorigin="anonymous"></script>
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-5573963043624926"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
             </div>
 
         {% else %}
@@ -519,12 +527,16 @@ HTML_TEMPLATE = '''
 
                 <div class="ad-container">
                     <div class="ad-label">Advertisement</div>
-                    <p style="color: var(--text-muted); font-size: 0.9rem;">
-                        <!-- Google AdSense Code Here -->
-                        <br/>
-                        &lt;script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-xxxxxxxxxxxxxxxx"<br/>
-                        crossorigin="anonymous"&gt;&lt;/script&gt;
-                    </p>
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5573963043624926"
+                         crossorigin="anonymous"></script>
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-5573963043624926"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
                 </div>
 
                 <div class="post-content">
@@ -533,12 +545,16 @@ HTML_TEMPLATE = '''
 
                 <div class="ad-container">
                     <div class="ad-label">Advertisement</div>
-                    <p style="color: var(--text-muted); font-size: 0.9rem;">
-                        <!-- Google AdSense Code Here -->
-                        <br/>
-                        &lt;script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-xxxxxxxxxxxxxxxx"<br/>
-                        crossorigin="anonymous"&gt;&lt;/script&gt;
-                    </p>
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5573963043624926"
+                         crossorigin="anonymous"></script>
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-5573963043624926"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
                 </div>
             </div>
         {% endif %}
