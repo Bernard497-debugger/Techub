@@ -8,107 +8,439 @@ app = Flask(__name__)
 POSTS = [
     {
         'id': 1,
-        'title': 'Getting Started with Python Flask',
-        'slug': 'python-flask-intro',
+        'title': 'HTML5 Semantic Elements Complete Guide',
+        'slug': 'html5-semantic-elements',
         'author': 'Tech Writer',
-        'date': '2026-03-20',
-        'category': 'Python',
-        'excerpt': 'Learn how to build web applications with Flask, the lightweight Python web framework.',
+        'date': '2026-03-24',
+        'category': 'HTML',
+        'excerpt': 'Master HTML5 semantic elements for better structure, SEO, and accessibility in your web projects.',
         'content': '''
-        <h2>Introduction to Flask</h2>
-        <p>Flask is a popular Python web framework that makes it easy to build web applications. It's lightweight, flexible, and perfect for both beginners and experienced developers.</p>
+        <h2>Understanding HTML5 Semantic Elements</h2>
+        <p>HTML5 introduced semantic elements that clearly describe their meaning to both the browser and developer. They improve SEO, accessibility, and code readability.</p>
         
-        <h3>Why Choose Flask?</h3>
+        <h3>Common Semantic Elements</h3>
         <ul>
-            <li><strong>Lightweight:</strong> Minimal overhead, maximum flexibility</li>
-            <li><strong>Flexible:</strong> Choose your own tools and libraries</li>
-            <li><strong>Great Documentation:</strong> Community support is excellent</li>
-            <li><strong>Easy to Learn:</strong> Perfect for beginners</li>
+            <li><code>&lt;header&gt;</code> - Introductory content or navigation</li>
+            <li><code>&lt;nav&gt;</code> - Navigation links</li>
+            <li><code>&lt;main&gt;</code> - Main content of the page</li>
+            <li><code>&lt;article&gt;</code> - Self-contained content</li>
+            <li><code>&lt;section&gt;</code> - Thematic grouping of content</li>
+            <li><code>&lt;aside&gt;</code> - Sidebar or related content</li>
+            <li><code>&lt;footer&gt;</code> - Footer information</li>
         </ul>
         
-        <h3>Installation</h3>
-        <pre><code>pip install flask</code></pre>
+        <h3>Semantic Document Structure</h3>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;nav&gt;Navigation links&lt;/nav&gt;
+    &lt;/header&gt;
+    &lt;main&gt;
+        &lt;article&gt;
+            &lt;h1&gt;Article Title&lt;/h1&gt;
+            &lt;p&gt;Content...&lt;/p&gt;
+        &lt;/article&gt;
+    &lt;/main&gt;
+    &lt;footer&gt;Footer content&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
         
-        <h3>Your First Flask App</h3>
-        <pre><code>from flask import Flask
-app = Flask(__name__)
-
-@app.route('/')
-def hello():
-    return 'Hello, World!'
-
-if __name__ == '__main__':
-    app.run(debug=True)</code></pre>
-        
-        <p>That's it! You now have a working Flask application. Run it with <code>python app.py</code> and visit <code>http://localhost:5000</code>.</p>
+        <h3>Benefits of Semantic HTML</h3>
+        <ul>
+            <li><strong>SEO:</strong> Search engines better understand your content</li>
+            <li><strong>Accessibility:</strong> Screen readers can navigate better</li>
+            <li><strong>Readability:</strong> Cleaner, more maintainable code</li>
+            <li><strong>Mobile:</strong> Better rendering on mobile devices</li>
+        </ul>
         '''
     },
     {
         'id': 2,
-        'title': 'JavaScript Async/Await Explained',
-        'slug': 'javascript-async-await',
+        'title': 'Flexbox vs Grid: When to Use Each',
+        'slug': 'flexbox-vs-grid',
         'author': 'Tech Writer',
-        'date': '2026-03-18',
-        'category': 'JavaScript',
-        'excerpt': 'Master asynchronous programming in JavaScript with async/await syntax.',
+        'date': '2026-03-22',
+        'category': 'CSS',
+        'excerpt': 'Learn the differences between Flexbox and CSS Grid, and when to use each one for optimal layouts.',
         'content': '''
-        <h2>Understanding Async/Await</h2>
-        <p>Async/await is a modern way to handle asynchronous operations in JavaScript, making your code cleaner and easier to read.</p>
+        <h2>Flexbox vs CSS Grid</h2>
+        <p>Both Flexbox and Grid are powerful layout tools, but they serve different purposes. Understanding when to use each is crucial for modern web design.</p>
         
-        <h3>What is Async/Await?</h3>
-        <p>Async/await allows you to write asynchronous code that looks and behaves more like synchronous code, making it easier to understand and debug.</p>
-        
-        <h3>Basic Syntax</h3>
-        <pre><code>async function fetchData() {
-    try {
-        const response = await fetch('/api/data');
-        const data = await response.json();
-        return data;
-    } catch (error) {
-        console.error('Error:', error);
-    }
+        <h3>Flexbox Basics</h3>
+        <p>Flexbox is designed for one-dimensional layouts (rows or columns).</p>
+        <pre><code>.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
 }</code></pre>
         
-        <h3>Key Points</h3>
+        <h3>Grid Basics</h3>
+        <p>Grid is designed for two-dimensional layouts (rows AND columns).</p>
+        <pre><code>.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+}</code></pre>
+        
+        <h3>Use Flexbox When:</h3>
         <ul>
-            <li>Use <code>async</code> keyword to declare an async function</li>
-            <li>Use <code>await</code> to wait for a Promise to resolve</li>
-            <li>Always use try/catch for error handling</li>
-            <li>Async functions always return a Promise</li>
+            <li>Building navigation bars</li>
+            <li>Creating button groups</li>
+            <li>Aligning items in a single row or column</li>
+            <li>Need flexible spacing and alignment</li>
+        </ul>
+        
+        <h3>Use Grid When:</h3>
+        <ul>
+            <li>Building page layouts</li>
+            <li>Creating image galleries</li>
+            <li>Need both rows AND columns control</li>
+            <li>Building complex, multi-section layouts</li>
         </ul>
         '''
     },
     {
         'id': 3,
-        'title': 'CSS Grid Layout Masterclass',
-        'slug': 'css-grid-layout',
+        'title': 'JavaScript DOM Manipulation Essentials',
+        'slug': 'javascript-dom-manipulation',
         'author': 'Tech Writer',
-        'date': '2026-03-15',
-        'category': 'CSS',
-        'excerpt': 'Create responsive layouts with CSS Grid, the modern way to build web layouts.',
+        'date': '2026-03-21',
+        'category': 'JavaScript',
+        'excerpt': 'Master DOM manipulation in JavaScript to dynamically modify HTML and create interactive web experiences.',
         'content': '''
-        <h2>Mastering CSS Grid</h2>
-        <p>CSS Grid is a powerful layout system that lets you create complex, responsive layouts with ease.</p>
+        <h2>DOM Manipulation in JavaScript</h2>
+        <p>The Document Object Model (DOM) allows you to interact with HTML elements dynamically. This is core to building interactive web applications.</p>
         
-        <h3>Grid Basics</h3>
-        <p>A grid container holds grid items arranged in rows and columns.</p>
+        <h3>Selecting Elements</h3>
+        <pre><code>// Select by ID
+const element = document.getElementById('myId');
+
+// Select by class
+const elements = document.getElementsByClassName('myClass');
+
+// Modern way: querySelector
+const element = document.querySelector('.myClass');
+const elements = document.querySelectorAll('.item');</code></pre>
         
-        <h3>Creating a Grid</h3>
-        <pre><code>.container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    gap: 20px;
-}</code></pre>
+        <h3>Modifying Elements</h3>
+        <pre><code>// Change text content
+element.textContent = 'New text';
+
+// Change HTML
+element.innerHTML = '&lt;strong&gt;Bold text&lt;/strong&gt;';
+
+// Add/remove classes
+element.classList.add('active');
+element.classList.remove('hidden');
+
+// Change styles
+element.style.color = 'red';
+element.style.fontSize = '20px';</code></pre>
         
-        <h3>Responsive Grids</h3>
-        <pre><code>@media (max-width: 768px) {
+        <h3>Creating Elements</h3>
+        <pre><code>const newDiv = document.createElement('div');
+newDiv.textContent = 'Hello World';
+newDiv.classList.add('my-class');
+
+// Append to parent
+document.body.appendChild(newDiv);</code></pre>
+        
+        <h3>Event Listeners</h3>
+        <pre><code>const button = document.querySelector('button');
+
+button.addEventListener('click', function() {
+    console.log('Button clicked!');
+});
+
+// Remove event listener
+button.removeEventListener('click', handler);</code></pre>
+        '''
+    },
+    {
+        'id': 4,
+        'title': 'CSS Responsive Design: Mobile First Approach',
+        'slug': 'css-responsive-design',
+        'author': 'Tech Writer',
+        'date': '2026-03-19',
+        'category': 'CSS',
+        'excerpt': 'Build responsive websites using the mobile-first approach and media queries for all screen sizes.',
+        'content': '''
+        <h2>Responsive Design with Mobile First</h2>
+        <p>Mobile-first design means building for mobile devices first, then enhancing for larger screens. This improves performance and ensures a great mobile experience.</p>
+        
+        <h3>Viewport Meta Tag</h3>
+        <p>Always include the viewport meta tag in your HTML head:</p>
+        <pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+        
+        <h3>Mobile-First Media Queries</h3>
+        <pre><code>/* Mobile styles (default) */
+.container {
+    font-size: 14px;
+    padding: 10px;
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
     .container {
-        grid-template-columns: 1fr;
+        font-size: 16px;
+        padding: 20px;
+    }
+}
+
+/* Desktop and up */
+@media (min-width: 1024px) {
+    .container {
+        font-size: 18px;
+        padding: 30px;
     }
 }</code></pre>
         
-        <p>CSS Grid makes building responsive layouts straightforward and maintainable.</p>
+        <h3>Responsive Images</h3>
+        <pre><code>img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Use srcset for different screen sizes */
+&lt;img srcset="small.jpg 400w, medium.jpg 800w, large.jpg 1200w"
+     sizes="(max-width: 600px) 400px, 800px"
+     src="medium.jpg" alt="Responsive image"&gt;</code></pre>
+        '''
+    },
+    {
+        'id': 5,
+        'title': 'JavaScript Promises and Error Handling',
+        'slug': 'javascript-promises',
+        'author': 'Tech Writer',
+        'date': '2026-03-17',
+        'category': 'JavaScript',
+        'excerpt': 'Understand JavaScript Promises for handling asynchronous operations and proper error handling.',
+        'content': '''
+        <h2>Mastering JavaScript Promises</h2>
+        <p>Promises represent the eventual completion of an asynchronous operation and its resulting value. They're fundamental to modern JavaScript.</p>
+        
+        <h3>Promise States</h3>
+        <ul>
+            <li><strong>Pending:</strong> Initial state, operation hasn't completed yet</li>
+            <li><strong>Fulfilled:</strong> Operation completed successfully</li>
+            <li><strong>Rejected:</strong> Operation failed</li>
+        </ul>
+        
+        <h3>Creating a Promise</h3>
+        <pre><code>const myPromise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve('Success!');
+        // or reject(new Error('Failed!'));
+    }, 1000);
+});
+
+// Consume the promise
+myPromise
+    .then(result => console.log(result))
+    .catch(error => console.error(error))
+    .finally(() => console.log('Done'));</code></pre>
+        
+        <h3>Promise Chaining</h3>
+        <pre><code>fetch('/api/users')
+    .then(response => response.json())
+    .then(data => {
+        console.log('Users:', data);
+        return data[0].id;
+    })
+    .then(userId => fetch(`/api/users/${userId}`))
+    .then(response => response.json())
+    .then(user => console.log('User details:', user))
+    .catch(error => console.error('Error:', error));</code></pre>
+        
+        <h3>Promise.all() and Promise.race()</h3>
+        <pre><code>// Wait for all promises
+Promise.all([promise1, promise2, promise3])
+    .then(results => console.log(results));
+
+// Race: return first settled promise
+Promise.race([promise1, promise2])
+    .then(winner => console.log(winner));</code></pre>
+        '''
+    },
+    {
+        'id': 6,
+        'title': 'CSS Animations and Transitions Guide',
+        'slug': 'css-animations',
+        'author': 'Tech Writer',
+        'date': '2026-03-16',
+        'category': 'CSS',
+        'excerpt': 'Create smooth animations and transitions with CSS to enhance user experience and interactivity.',
+        'content': '''
+        <h2>CSS Animations and Transitions</h2>
+        <p>Animations and transitions add polish to your web design. CSS provides powerful tools to create smooth, performant animations.</p>
+        
+        <h3>CSS Transitions</h3>
+        <p>Transitions smoothly change property values over time.</p>
+        <pre><code>.button {
+    background-color: blue;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: darkblue;
+}</code></pre>
+        
+        <h3>Transition Properties</h3>
+        <pre><code>/* Shorthand */
+transition: property duration timing-function delay;
+
+/* Example */
+transition: all 0.5s ease-in-out 0.1s;</code></pre>
+        
+        <h3>CSS Keyframe Animations</h3>
+        <pre><code>@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.element {
+    animation: slideIn 1s ease-out forwards;
+}</code></pre>
+        
+        <h3>Animation Properties</h3>
+        <ul>
+            <li><code>animation-name</code> - Name of the keyframes</li>
+            <li><code>animation-duration</code> - How long the animation takes</li>
+            <li><code>animation-timing-function</code> - Speed curve (ease, linear, etc.)</li>
+            <li><code>animation-delay</code> - Wait before starting</li>
+            <li><code>animation-iteration-count</code> - How many times to repeat</li>
+            <li><code>animation-direction</code> - Forward, reverse, or alternate</li>
+        </ul>
+        '''
+    },
+    {
+        'id': 7,
+        'title': 'Form Validation in HTML and JavaScript',
+        'slug': 'form-validation',
+        'author': 'Tech Writer',
+        'date': '2026-03-14',
+        'category': 'HTML',
+        'excerpt': 'Learn to validate HTML forms both on the client-side with HTML5 and JavaScript for better user experience.',
+        'content': '''
+        <h2>Form Validation Techniques</h2>
+        <p>Proper form validation ensures data quality and improves user experience. Use both HTML5 validation and JavaScript for robust forms.</p>
+        
+        <h3>HTML5 Validation</h3>
+        <pre><code>&lt;form&gt;
+    &lt;input type="email" required&gt;
+    &lt;input type="password" minlength="8" required&gt;
+    &lt;input type="number" min="1" max="100"&gt;
+    &lt;input type="url" required&gt;
+    &lt;textarea minlength="10" maxlength="500"&gt;&lt;/textarea&gt;
+    &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+        
+        <h3>JavaScript Form Validation</h3>
+        <pre><code>const form = document.querySelector('form');
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const email = form.querySelector('input[type="email"]').value;
+    const password = form.querySelector('input[type="password"]').value;
+    
+    if (!email.includes('@')) {
+        alert('Invalid email address');
+        return;
+    }
+    
+    if (password.length < 8) {
+        alert('Password must be at least 8 characters');
+        return;
+    }
+    
+    // Form is valid, submit
+    form.submit();
+});</code></pre>
+        
+        <h3>Custom Error Messages</h3>
+        <pre><code>const input = document.querySelector('input[type="email"]');
+
+input.addEventListener('invalid', function(e) {
+    e.preventDefault();
+    input.setCustomValidity('Please enter a valid email address');
+});
+
+input.addEventListener('input', function() {
+    if (this.validity.valid) {
+        this.setCustomValidity('');
+    }
+});</code></pre>
+        '''
+    },
+    {
+        'id': 8,
+        'title': 'Web Performance Optimization Best Practices',
+        'slug': 'web-performance-optimization',
+        'author': 'Tech Writer',
+        'date': '2026-03-13',
+        'category': 'Web Dev',
+        'excerpt': 'Optimize your websites for speed and performance using proven techniques and best practices.',
+        'content': '''
+        <h2>Web Performance Optimization</h2>
+        <p>Website speed is critical for user experience and SEO. Here are proven techniques to optimize your web applications.</p>
+        
+        <h3>Image Optimization</h3>
+        <pre><code>/* Use modern image formats */
+&lt;picture&gt;
+    &lt;source srcset="image.webp" type="image/webp"&gt;
+    &lt;source srcset="image.jpg" type="image/jpeg"&gt;
+    &lt;img src="image.jpg" alt="Description"&gt;
+&lt;/picture&gt;
+
+/* Lazy loading */
+&lt;img src="image.jpg" loading="lazy" alt="Description"&gt;</code></pre>
+        
+        <h3>CSS Optimization</h3>
+        <ul>
+            <li>Minify CSS files</li>
+            <li>Remove unused CSS with PurgeCSS or Tailwind</li>
+            <li>Defer non-critical CSS</li>
+            <li>Use CSS variables for reusability</li>
+            <li>Avoid inline styles</li>
+        </ul>
+        
+        <h3>JavaScript Optimization</h3>
+        <pre><code>/* Defer non-critical scripts */
+&lt;script defer src="analytics.js"&gt;&lt;/script&gt;
+
+/* Lazy load heavy libraries */
+if ('IntersectionObserver' in window) {
+    // Use Intersection Observer to load components on demand
+}</code></pre>
+        
+        <h3>Caching Strategies</h3>
+        <ul>
+            <li><strong>Browser Caching:</strong> Set proper cache headers</li>
+            <li><strong>CDN:</strong> Use a Content Delivery Network</li>
+            <li><strong>Service Workers:</strong> Cache assets for offline support</li>
+            <li><strong>HTTP/2:</strong> Multiplexing for faster requests</li>
+        </ul>
+        
+        <h3>Performance Metrics</h3>
+        <ul>
+            <li><strong>FCP:</strong> First Contentful Paint</li>
+            <li><strong>LCP:</strong> Largest Contentful Paint</li>
+            <li><strong>CLS:</strong> Cumulative Layout Shift</li>
+            <li><strong>FID:</strong> First Input Delay</li>
+        </ul>
         '''
     }
 ]
