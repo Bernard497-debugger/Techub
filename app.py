@@ -170,6 +170,10 @@ Disallow: /admin
 Sitemap: https://techub-l5vk.onrender.com/sitemap.xml
 ''', 200, {'Content-Type': 'text/plain'}
 
+@app.route('/google5ce0866dc1e9ca22.html')
+def google_verification():
+    return 'google-site-verification: google5ce0866dc1e9ca22.html', 200, {'Content-Type': 'text/html'}
+
 @app.route('/sitemap.xml')
 def sitemap():
     sitemap_urls = [
