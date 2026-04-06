@@ -22,7 +22,6 @@ POSTS = [
     {'id': 16, 'title': 'CSS Preprocessors: SASS and SCSS for Enterprise-Scale Styling', 'slug': 'css-preprocessors-sass', 'author': 'Tech Writer', 'date': '2026-03-25', 'category': 'CSS', 'excerpt': 'Master SASS and SCSS for scalable CSS at enterprise level.', 'content': '<h2>Understanding CSS Preprocessors and Their Value</h2><p>CSS preprocessors like SASS extend CSS with programming features.</p>'},
 ]
 
-# Base HTML template with canonical tags
 BASE_TEMPLATE = '''
 <!DOCTYPE html>
 <html lang="en">
@@ -31,7 +30,6 @@ BASE_TEMPLATE = '''
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}TechHub - Tech Blog{% endblock %}</title>
     <meta name="description" content="{% block description %}Learn web development, HTML, CSS, and JavaScript{% endblock %}">
-    <!-- CANONICAL TAG - FIXES GOOGLE SEARCH CONSOLE DUPLICATE CONTENT WARNING -->
     <link rel="canonical" href="{{ canonical_url }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pico-css/css/pico.min.css">
     <style>
@@ -39,23 +37,13 @@ BASE_TEMPLATE = '''
             --form-element-valid-border-color: #10b981;
             --transition: all 0.3s ease;
         }
-        
-        * {
-            scroll-behavior: smooth;
-        }
-        
+        * { scroll-behavior: smooth; }
         body {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             padding: 2rem 0;
         }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
-        
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
         header {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
@@ -64,7 +52,6 @@ BASE_TEMPLATE = '''
             border-radius: 15px;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
         }
-        
         h1 {
             margin: 0;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -72,14 +59,7 @@ BASE_TEMPLATE = '''
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        
-        nav {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1.5rem;
-            flex-wrap: wrap;
-        }
-        
+        nav { display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap; }
         nav a {
             padding: 0.5rem 1rem;
             background: #f0f0f0;
@@ -89,24 +69,14 @@ BASE_TEMPLATE = '''
             color: #333;
             font-weight: 500;
         }
-        
-        nav a:hover {
-            background: #667eea;
-            color: white;
-        }
-        
-        nav a.active {
-            background: #764ba2;
-            color: white;
-        }
-        
+        nav a:hover { background: #667eea; color: white; }
+        nav a.active { background: #764ba2; color: white; }
         .posts-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
             gap: 2rem;
             margin-bottom: 3rem;
         }
-        
         article {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
@@ -117,13 +87,11 @@ BASE_TEMPLATE = '''
             cursor: pointer;
             border: 2px solid transparent;
         }
-        
         article:hover {
             transform: translateY(-5px);
             border-color: #667eea;
             box-shadow: 0 12px 48px rgba(102, 126, 234, 0.3);
         }
-        
         .post-meta {
             display: flex;
             gap: 1rem;
@@ -132,7 +100,6 @@ BASE_TEMPLATE = '''
             font-size: 0.9rem;
             color: #666;
         }
-        
         .category-tag {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
@@ -141,35 +108,11 @@ BASE_TEMPLATE = '''
             font-size: 0.85rem;
             font-weight: 600;
         }
-        
-        .post-title {
-            font-size: 1.5rem;
-            margin: 1rem 0;
-            color: #333;
-            text-decoration: none;
-        }
-        
-        .post-title:hover {
-            color: #667eea;
-        }
-        
-        .excerpt {
-            color: #555;
-            line-height: 1.6;
-            margin-bottom: 1rem;
-        }
-        
-        .read-more {
-            color: #667eea;
-            text-decoration: none;
-            font-weight: 600;
-            transition: var(--transition);
-        }
-        
-        .read-more:hover {
-            color: #764ba2;
-        }
-        
+        .post-title { font-size: 1.5rem; margin: 1rem 0; color: #333; text-decoration: none; }
+        .post-title:hover { color: #667eea; }
+        .excerpt { color: #555; line-height: 1.6; margin-bottom: 1rem; }
+        .read-more { color: #667eea; text-decoration: none; font-weight: 600; transition: var(--transition); }
+        .read-more:hover { color: #764ba2; }
         .full-post {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
@@ -178,18 +121,8 @@ BASE_TEMPLATE = '''
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
             line-height: 1.8;
         }
-        
-        .full-post h2 {
-            color: #667eea;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-        }
-        
-        .full-post h3 {
-            color: #764ba2;
-            margin-top: 1.5rem;
-        }
-        
+        .full-post h2 { color: #667eea; margin-top: 2rem; margin-bottom: 1rem; }
+        .full-post h3 { color: #764ba2; margin-top: 1.5rem; }
         .back-link {
             display: inline-block;
             margin-bottom: 2rem;
@@ -200,18 +133,8 @@ BASE_TEMPLATE = '''
             border-radius: 8px;
             transition: var(--transition);
         }
-        
-        .back-link:hover {
-            transform: translateX(-5px);
-        }
-        
-        footer {
-            text-align: center;
-            padding: 2rem;
-            color: white;
-            margin-top: 3rem;
-        }
-        
+        .back-link:hover { transform: translateX(-5px); }
+        footer { text-align: center; padding: 2rem; color: white; margin-top: 3rem; }
         .carousel-container {
             background: rgba(255, 255, 255, 0.1);
             padding: 2rem;
@@ -219,13 +142,7 @@ BASE_TEMPLATE = '''
             margin-bottom: 3rem;
             overflow-x: auto;
         }
-        
-        .carousel {
-            display: flex;
-            gap: 1rem;
-            min-width: 100%;
-        }
-        
+        .carousel { display: flex; gap: 1rem; min-width: 100%; }
         .carousel-item {
             background: white;
             padding: 1.5rem;
@@ -238,7 +155,7 @@ BASE_TEMPLATE = '''
 <body>
     <div class="container">
         <header>
-            <h1>🚀 TechHub</h1>
+            <h1>\ud83d\ude80 TechHub</h1>
             <p>Master web development with in-depth tutorials and guides</p>
             <nav>
                 <a href="/" {% if current_page == 'home' %}class="active"{% endif %}>Home</a>
@@ -248,9 +165,9 @@ BASE_TEMPLATE = '''
                 <a href="/?category=Web Dev" {% if current_category == 'Web Dev' %}class="active"{% endif %}>Web Dev</a>
             </nav>
         </header>
-        
+
         {% block content %}{% endblock %}
-        
+
         <footer>
             <p>&copy; 2026 TechHub. All rights reserved. | Powered by Flask</p>
         </footer>
@@ -259,7 +176,6 @@ BASE_TEMPLATE = '''
 </html>
 '''
 
-# Homepage template
 HOME_TEMPLATE = BASE_TEMPLATE + '''
 {% block title %}TechHub - Learn Web Development{% endblock %}
 {% block description %}Master HTML, CSS, JavaScript, and web development with comprehensive tutorials from TechHub{% endblock %}
@@ -267,19 +183,19 @@ HOME_TEMPLATE = BASE_TEMPLATE + '''
 <section class="carousel-container">
     <div class="carousel">
         <div class="carousel-item">
-            <h3>📚 Latest Articles</h3>
+            <h3>\ud83d\udcda Latest Articles</h3>
             <p>Stay updated with fresh web development content every week</p>
         </div>
         <div class="carousel-item">
-            <h3>🎯 Skill Progression</h3>
+            <h3>\ud83c\udfaf Skill Progression</h3>
             <p>Learn from beginner to advanced concepts systematically</p>
         </div>
         <div class="carousel-item">
-            <h3>💡 Practical Examples</h3>
+            <h3>\ud83d\udca1 Practical Examples</h3>
             <p>Real-world code examples you can use in your projects</p>
         </div>
         <div class="carousel-item">
-            <h3>🔧 Best Practices</h3>
+            <h3>\ud83d\udd27 Best Practices</h3>
             <p>Industry-standard techniques and patterns explained</p>
         </div>
     </div>
@@ -295,7 +211,7 @@ HOME_TEMPLATE = BASE_TEMPLATE + '''
             </div>
             <a href="/post/{{ post.slug }}" class="post-title">{{ post.title }}</a>
             <p class="excerpt">{{ post.excerpt }}</p>
-            <a href="/post/{{ post.slug }}" class="read-more">Read More →</a>
+            <a href="/post/{{ post.slug }}" class="read-more">Read More \u2192</a>
         </article>
         {% endfor %}
     </section>
@@ -303,12 +219,11 @@ HOME_TEMPLATE = BASE_TEMPLATE + '''
 {% endblock %}
 '''
 
-# Post template
 POST_TEMPLATE = BASE_TEMPLATE + '''
 {% block title %}{{ post.title }} - TechHub{% endblock %}
 {% block description %}{{ post.excerpt }}{% endblock %}
 {% block content %}
-<a href="/" class="back-link">← Back to Home</a>
+<a href="/" class="back-link">\u2190 Back to Home</a>
 
 <article class="full-post">
     <div class="post-meta">
@@ -322,20 +237,18 @@ POST_TEMPLATE = BASE_TEMPLATE + '''
 {% endblock %}
 '''
 
+
 @app.route('/')
 def home():
     current_category = request.args.get('category', None)
     posts = POSTS
-    
+
     if current_category:
         posts = [p for p in POSTS if p['category'] == current_category]
-    
-    # Sort by date descending
+
     posts = sorted(posts, key=lambda x: x['date'], reverse=True)
-    
-    # Build canonical URL (no query params for consistency)
     canonical_url = url_for('home', _external=True)
-    
+
     return render_template_string(
         HOME_TEMPLATE,
         posts=posts,
@@ -344,16 +257,16 @@ def home():
         canonical_url=canonical_url
     )
 
+
 @app.route('/post/<slug>')
 def post(slug):
     post_item = next((p for p in POSTS if p['slug'] == slug), None)
-    
+
     if not post_item:
         return "Post not found", 404
-    
-    # Build canonical URL for this specific post
+
     canonical_url = url_for('post', slug=slug, _external=True)
-    
+
     return render_template_string(
         POST_TEMPLATE,
         post=post_item,
@@ -362,38 +275,11 @@ def post(slug):
         canonical_url=canonical_url
     )
 
-# Google AdSense integration (if you have an AdSense account)
+
 @app.route('/robots.txt')
 def robots():
     return '''User-agent: *
 Allow: /
 Disallow: /admin
 
-Sitemap: https://yourdomain.com/sitemap.xml
-'''
-
-@app.route('/sitemap.xml')
-def sitemap():
-    xml = '<?xml version="1.0" encoding="UTF-8"?>\n'
-    xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-    
-    # Homepage
-    xml += f'  <url>\n'
-    xml += f'    <loc>{url_for("home", _external=True)}</loc>\n'
-    xml += f'    <lastmod>2026-03-27</lastmod>\n'
-    xml += f'    <changefreq>weekly</changefreq>\n'
-    xml += f'  </url>\n'
-    
-    # Individual posts
-    for post in POSTS:
-        xml += f'  <url>\n'
-        xml += f'    <loc>{url_for("post", slug=post["slug"], _external=True)}</loc>\n'
-        xml += f'    <lastmod>{post["date"]}</lastmod>\n'
-        xml += f'    <changefreq>monthly</changefreq>\n'
-        xml += f'  </url>\n'
-    
-    xml += '</urlset>'
-    return xml, 200, {'Content-Type': 'application/xml'}
-
-if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+Sitemap: https://yourdomain.com/sitemap
