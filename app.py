@@ -21,123 +21,171 @@ POSTS = [
     {'id': 16, 'title': 'CSS Preprocessors: SASS and SCSS for Enterprise-Scale Styling', 'slug': 'css-preprocessors-sass', 'author': 'Tech Writer', 'date': '2026-03-25', 'category': 'CSS', 'excerpt': 'Master SASS and SCSS for scalable CSS at enterprise level.', 'content': '<h2>Understanding CSS Preprocessors and Their Value</h2><p>CSS preprocessors like SASS extend CSS with programming features.</p>'},
 ]
 
-STYLES = '''
-<style>
+STYLES = '''<style>
     :root { --transition: all 0.3s ease; }
     * { scroll-behavior: smooth; }
-    body {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        min-height: 100vh;
-        padding: 2rem 0;
-    }
+    body { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; padding: 2rem 0; }
     .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
-    header {
-        background: rgba(255,255,255,0.95);
-        backdrop-filter: blur(10px);
-        padding: 2rem;
-        margin-bottom: 3rem;
-        border-radius: 15px;
-        box-shadow: 0 8px 32px rgba(0,0,0,0.1);
-    }
-    h1 {
-        margin: 0;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-    }
+    header { background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); padding: 2rem; margin-bottom: 3rem; border-radius: 15px; box-shadow: 0 8px 32px rgba(0,0,0,0.1); }
+    h1 { margin: 0; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
     nav { display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap; }
-    nav a {
-        padding: 0.5rem 1rem;
-        background: #f0f0f0;
-        text-decoration: none;
-        border-radius: 8px;
-        transition: var(--transition);
-        color: #333;
-        font-weight: 500;
-    }
+    nav a { padding: 0.5rem 1rem; background: #f0f0f0; text-decoration: none; border-radius: 8px; transition: var(--transition); color: #333; font-weight: 500; }
     nav a:hover { background: #667eea; color: white; }
     nav a.active { background: #764ba2; color: white; }
-    .posts-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-        gap: 2rem;
-        margin-bottom: 3rem;
-    }
-    article {
-        background: rgba(255,255,255,0.95);
-        backdrop-filter: blur(10px);
-        padding: 2rem;
-        border-radius: 15px;
-        box-shadow: 0 8px 32px rgba(0,0,0,0.1);
-        transition: var(--transition);
-        cursor: pointer;
-        border: 2px solid transparent;
-    }
-    article:hover {
-        transform: translateY(-5px);
-        border-color: #667eea;
-        box-shadow: 0 12px 48px rgba(102,126,234,0.3);
-    }
-    .post-meta {
-        display: flex;
-        gap: 1rem;
-        margin-bottom: 1rem;
-        flex-wrap: wrap;
-        font-size: 0.9rem;
-        color: #666;
-    }
-    .category-tag {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
-        padding: 0.25rem 0.75rem;
-        border-radius: 20px;
-        font-size: 0.85rem;
-        font-weight: 600;
-    }
+    .posts-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2rem; margin-bottom: 3rem; }
+    article { background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); padding: 2rem; border-radius: 15px; box-shadow: 0 8px 32px rgba(0,0,0,0.1); transition: var(--transition); cursor: pointer; border: 2px solid transparent; }
+    article:hover { transform: translateY(-5px); border-color: #667eea; box-shadow: 0 12px 48px rgba(102,126,234,0.3); }
+    .post-meta { display: flex; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap; font-size: 0.9rem; color: #666; }
+    .category-tag { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
     .post-title { font-size: 1.5rem; margin: 1rem 0; color: #333; text-decoration: none; display: block; }
     .post-title:hover { color: #667eea; }
     .excerpt { color: #555; line-height: 1.6; margin-bottom: 1rem; }
     .read-more { color: #667eea; text-decoration: none; font-weight: 600; transition: var(--transition); }
     .read-more:hover { color: #764ba2; }
-    .full-post {
-        background: rgba(255,255,255,0.95);
-        backdrop-filter: blur(10px);
-        padding: 3rem;
-        border-radius: 15px;
-        box-shadow: 0 8px 32px rgba(0,0,0,0.1);
-        line-height: 1.8;
-    }
+    .full-post { background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); padding: 3rem; border-radius: 15px; box-shadow: 0 8px 32px rgba(0,0,0,0.1); line-height: 1.8; }
     .full-post h2 { color: #667eea; margin-top: 2rem; margin-bottom: 1rem; }
     .full-post h3 { color: #764ba2; margin-top: 1.5rem; }
-    .back-link {
-        display: inline-block;
-        margin-bottom: 2rem;
-        padding: 0.75rem 1.5rem;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
-        text-decoration: none;
-        border-radius: 8px;
-        transition: var(--transition);
-    }
+    .back-link { display: inline-block; margin-bottom: 2rem; padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; border-radius: 8px; transition: var(--transition); }
     .back-link:hover { transform: translateX(-5px); }
     footer { text-align: center; padding: 2rem; color: white; margin-top: 3rem; }
-    .carousel-container {
-        background: rgba(255,255,255,0.1);
-        padding: 2rem;
-        border-radius: 15px;
-        margin-bottom: 3rem;
-        overflow-x: auto;
-    }
+    .carousel-container { background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 15px; margin-bottom: 3rem; overflow-x: auto; }
     .carousel { display: flex; gap: 1rem; }
-    .carousel-item {
-        background: white;
-        padding: 1.5rem;
-        border-radius: 10px;
-        min-width: 300px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
-</style>
+    .carousel-item { background: white; padding: 1.5rem; border-radius: 10px; min-width: 300px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+</style>'''
+
+
+def render_page(title, description, canonical_url, current_page, current_category, content):
+    nav_links = [
+        ('/', 'Home', 'home', None),
+        ('/?category=HTML', 'HTML', None, 'HTML'),
+        ('/?category=CSS', 'CSS', None, 'CSS'),
+        ('/?category=JavaScript', 'JavaScript', None, 'JavaScript'),
+        ('/?category=Web Dev', 'Web Dev', None, 'Web Dev'),
+    ]
+    nav_html = ''
+    for href, label, page, cat in nav_links:
+        active = 'active' if (page and current_page == page and not current_category) or (cat and current_category == cat) else ''
+        nav_html += f'<a href="{href}" class="{active}">{label}</a>\n'
+
+    return f'''<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <meta name="description" content="{description}">
+    <link rel="canonical" href="{canonical_url}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pico-css/css/pico.min.css">
+    {STYLES}
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 TechHub</h1>
+            <p>Master web development with in-depth tutorials and guides</p>
+            <nav>{nav_html}</nav>
+        </header>
+        {content}
+        <footer>
+            <p>&copy; 2026 TechHub. All rights reserved. | Powered by Flask</p>
+        </footer>
+    </div>
+</body>
+</html>'''
+
+
+def build_home_content(posts):
+    cards = ''
+    for p in posts:
+        cards += f'''
+        <article onclick="window.location='/post/{p["slug"]}'">
+            <div class="post-meta">
+                <span>{p["date"]}</span>
+                <span class="category-tag">{p["category"]}</span>
+            </div>
+            <a href="/post/{p["slug"]}" class="post-title">{p["title"]}</a>
+            <p class="excerpt">{p["excerpt"]}</p>
+            <a href="/post/{p["slug"]}" class="read-more">Read More →</a>
+        </article>'''
+
+    return f'''
+    <section class="carousel-container">
+        <div class="carousel">
+            <div class="carousel-item"><h3>📚 Latest Articles</h3><p>Stay updated with fresh web development content every week</p></div>
+            <div class="carousel-item"><h3>🎯 Skill Progression</h3><p>Learn from beginner to advanced concepts systematically</p></div>
+            <div class="carousel-item"><h3>💡 Practical Examples</h3><p>Real-world code examples you can use in your projects</p></div>
+            <div class="carousel-item"><h3>🔧 Best Practices</h3><p>Industry-standard techniques and patterns explained</p></div>
+        </div>
+    </section>
+    <main><section class="posts-grid">{cards}</section></main>'''
+
+
+def build_post_content(p):
+    return f'''
+    <a href="/" class="back-link">← Back to Home</a>
+    <article class="full-post">
+        <div class="post-meta">
+            <span>{p["date"]}</span>
+            <span>By {p["author"]}</span>
+            <span class="category-tag">{p["category"]}</span>
+        </div>
+        <h1>{p["title"]}</h1>
+        {p["content"]}
+    </article>'''
+
+
+@app.route('/')
+def home():
+    current_category = request.args.get('category', None)
+    posts = POSTS if not current_category else [p for p in POSTS if p['category'] == current_category]
+    posts = sorted(posts, key=lambda x: x['date'], reverse=True)
+
+    return render_page(
+        title='TechHub - Learn Web Development',
+        description='Master HTML, CSS, JavaScript, and web development with comprehensive tutorials from TechHub',
+        canonical_url=url_for('home', _external=True),
+        current_page='home',
+        current_category=current_category,
+        content=build_home_content(posts)
+    )
+
+
+@app.route('/post/<slug>')
+def post(slug):
+    p = next((p for p in POSTS if p['slug'] == slug), None)
+    if not p:
+        return 'Post not found', 404
+
+    return render_page(
+        title=f'{p["title"]} - TechHub',
+        description=p['excerpt'],
+        canonical_url=url_for('post', slug=slug, _external=True),
+        current_page='post',
+        current_category=p['category'],
+        content=build_post_content(p)
+    )
+
+
+@app.route('/robots.txt')
+def robots():
+    return '''User-agent: *
+Allow: /
+Disallow: /admin
+
+Sitemap: https://techub-l5vk.onrender.com/sitemap.xml
 '''
 
-def render_base(
+
+@app.route('/sitemap.xml')
+def sitemap():
+    xml = '<?xml version="1.0" encoding="UTF-8"?>\n'
+    xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+    xml += f'  <url><loc>{url_for("home", _external=True)}</loc><lastmod>2026-03-27</lastmod><changefreq>weekly</changefreq></url>\n'
+    for p in POSTS:
+        xml += f'  <url><loc>{url_for("post", slug=p["slug"], _external=True)}</loc><lastmod>{p["date"]}</lastmod><changefreq>monthly</changefreq></url>\n'
+    xml += '</urlset>'
+    return xml, 200, {'Content-Type': 'application/xml'}
+
+
+if __name__ == '__main__':
+    app.run(debug=True, port=5000)
