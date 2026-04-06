@@ -282,4 +282,4 @@ def robots():
 Allow: /
 Disallow: /admin
 
-Sitemap: https://yourdomain.com/sitemap
+Sitemap: https://yourdomain.com/sitemap'''
